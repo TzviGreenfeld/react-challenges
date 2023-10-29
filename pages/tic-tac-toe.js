@@ -1,5 +1,7 @@
 import { useState } from "react";
+import Head from "next/head";
 import styles from '../styles/TicTacToe.module.css';
+
 
 const hasWinner = (board) => {
     // Helper function to check if three cells are equal and not null
@@ -96,7 +98,7 @@ export default function TicTacToe() {
         <>
             <Head>
                 <title>TicTacToe</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel="icon" type="image/svg+xml" href="/ticTacToe.svg" />
             </Head>
             <main>
                 <Game />
