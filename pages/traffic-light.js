@@ -7,6 +7,7 @@ const getNextLight = (currentLight) => {
     return lights[(currentIndex + 1) % 3];
 };
 
+
 const Light = ({ color, isOn }) => {
 
     return <div className={`${styles.light} ${styles[color]} ${!isOn && styles.off}`} />;
@@ -16,14 +17,18 @@ export default function TrafficLight() {
     const [currentLight, setCurrentLight] = useState('red');
 
     useEffect(() => {
+        const durations = { red: 4000, green: 3000, yellow: 1000 };
+
         const interval = setInterval(() => {
             setCurrentLight(light => getNextLight(light));
-        }, 1000);
+
+        }, durations[currentLight]);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [currentLight]);
 
     const isOn = (light) => light === currentLight;
+
     return (
         <main>
             <div className={styles.lightsContainer}>
