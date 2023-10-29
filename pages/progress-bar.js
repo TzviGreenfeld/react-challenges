@@ -18,7 +18,7 @@ export default function ProgressBar() {
     return (
         <>
             <Head>
-                <title>ProgressBar</title>
+                <title>Progress Bar</title>
                 <link rel="icon" type="image/svg+xml" href="/progressBar.svg" />
             </Head>
 

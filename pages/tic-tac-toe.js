@@ -97,7 +97,7 @@ export default function TicTacToe() {
     return (
         <>
             <Head>
-                <title>TicTacToe</title>
+                <title>Tic Tac Toe</title>
                 <link rel="icon" type="image/svg+xml" href="/ticTacToe.svg" />
             </Head>
             <main>

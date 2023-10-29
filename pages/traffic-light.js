@@ -33,7 +33,7 @@ export default function TrafficLight() {
     return (
         <>
             <Head>
-                <title>TrafficLight</title>
+                <title>Traffic Light</title>
                 <link rel="icon" type="image/svg+xml" href="/trafficLight.svg" />
             </Head>
 
