@@ -1,0 +1,9 @@
+.container {
+    /* outline: 1px solid var(--primary-color); */
+    font-size: 36px;
+    padding: 10px;
+}
+
+.lastSeconds {
+    color: red;
+}
