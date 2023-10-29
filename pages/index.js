@@ -22,6 +22,11 @@ export default function Home() {
               className={styles.description}
               href="/traffic-light" >Traffic-Light</a>
           </li>
+          <li key='progress-bar'>
+            <a
+              className={styles.description}
+              href="/progress-bar" >Progress-Bar</a>
+          </li>
         </ul>
 
 
