@@ -7,14 +7,14 @@
   align-items: center;
 }
 
-.title a {
+.challenges a {
   color: #0070f3;
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
+.challenges a:hover,
+.challenges a:focus,
+.challenges a:active {
   text-decoration: underline;
 }
 
