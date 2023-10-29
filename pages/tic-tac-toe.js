@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import styles from '../styles/TicTacToe.module.css';
+import ResetGame from "../components/ResetGame";
 
 
 const hasWinner = (board) => {
@@ -47,7 +48,11 @@ const Board = ({ board, cellClick }) => {
 
     return (
         <div className={styles.board}>
-            {board.map((item, index) => <Cell value={item} cellClick={() => cellClick(index)} />)}
+            {board.map((item, index) =>
+                <Cell
+                    key={index}
+                    value={item}
+                    cellClick={() => cellClick(index)} />)}
         </div>
     );
 };
@@ -85,9 +90,7 @@ const Game = () => {
 
             <Board board={board} cellClick={onCellClick}></Board>
             <br />
-            <div
-                className={styles.reset}
-                onClick={onResetClick}>Reset Game</div>
+            <ResetGame onClick={onResetClick} />
         </>);
 };
 

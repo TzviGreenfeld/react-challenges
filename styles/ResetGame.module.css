@@ -1,0 +1,17 @@
+.reset {
+    color: rgba(155, 0, 0, 0.7);
+    width: 450px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px 10px;
+    cursor: pointer;
+
+}
+
+.reset:hover {
+    color: rgba(200, 0, 0, 1);
+    border: 1px solid var(--primary-color);
+}

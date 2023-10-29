@@ -27,6 +27,11 @@ export default function Home() {
               className={styles.description}
               href="/progress-bar" >Progress-Bar</a>
           </li>
+          <li key='whac-a-mole'>
+            <a
+              className={styles.description}
+              href="/whac-a-mole" >Whac-A-Mole</a>
+          </li>
         </ul>
 
 
