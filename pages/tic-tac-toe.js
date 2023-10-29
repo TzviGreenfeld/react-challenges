@@ -44,11 +44,9 @@ const Cell = ({ value, cellClick }) => {
 const Board = ({ board, cellClick }) => {
 
     return (
-        <>
-            <div className={styles.board}>
-                {board.map((item, index) => <Cell value={item} cellClick={() => cellClick(index)} />)}
-            </div>
-        </>
+        <div className={styles.board}>
+            {board.map((item, index) => <Cell value={item} cellClick={() => cellClick(index)} />)}
+        </div>
     );
 };
 
@@ -74,28 +72,35 @@ const Game = () => {
         setBoard(Array(9).fill(null));
     };
 
-    return (<>
-        {isTie ?
-            <h1 className={styles.title}>It's A Tie</h1> :
-            hasWinner(board) ?
-                <h1 className={styles.title}>{`Player ${!isXTurn ? 'X' : 'O'} Won!`}</h1> :
-                <h1 className={styles.title}>{`Player: ${isXTurn ? 'X' : 'O'}`}</h1>
-        }
+    return (
+        <>
+            {isTie ?
+                <h1 className={styles.title}>It's A Tie</h1> :
+                hasWinner(board) ?
+                    <h1 className={styles.title}>{`Player ${!isXTurn ? 'X' : 'O'} Won!`}</h1> :
+                    <h1 className={styles.title}>{`Player: ${isXTurn ? 'X' : 'O'}`}</h1>
+            }
 
-        <Board board={board} cellClick={onCellClick}></Board>
-        <br />
-        <div
-            className={styles.reset}
-            onClick={onResetClick}>Reset Game</div>
-    </>);
+            <Board board={board} cellClick={onCellClick}></Board>
+            <br />
+            <div
+                className={styles.reset}
+                onClick={onResetClick}>Reset Game</div>
+        </>);
 };
 
 
 
 export default function TicTacToe() {
     return (
-        <main>
-            <Game />
-        </main>
+        <>
+            <Head>
+                <title>TicTacToe</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <main>
+                <Game />
+            </main>
+        </>
     );
 }

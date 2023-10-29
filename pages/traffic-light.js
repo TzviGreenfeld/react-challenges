@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
 import styles from '../styles/TrafficLight.module.css';
 
 const getNextLight = (currentLight) => {
@@ -30,13 +31,20 @@ export default function TrafficLight() {
     const isOn = (light) => light === currentLight;
 
     return (
-        <main>
-            <div className={styles.lightsContainer}>
-                <Light color="red" isOn={isOn('red')} />
-                <Light color="yellow" isOn={isOn('yellow')} />
-                <Light color="green" isOn={isOn('green')} />
-            </div>
-            <div className={styles.pole} />
-        </main >
+        <>
+            <Head>
+                <title>TrafficLight</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+
+            <main>
+                <div className={styles.lightsContainer}>
+                    <Light color="red" isOn={isOn('red')} />
+                    <Light color="yellow" isOn={isOn('yellow')} />
+                    <Light color="green" isOn={isOn('green')} />
+                </div>
+                <div className={styles.pole} />
+            </main >
+        </>
     );
 }
