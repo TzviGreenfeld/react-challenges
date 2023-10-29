@@ -15,10 +15,10 @@ const Light = ({ color, isOn }) => {
 };
 
 export default function TrafficLight() {
-    const [currentLight, setCurrentLight] = useState('red');
+    const [currentLight, setCurrentLight] = useState('yellow');
 
     useEffect(() => {
-        const durations = { red: 4000, green: 3000, yellow: 1000 };
+        const durations = { red: 3500, green: 3000, yellow: 1500 };
 
         const interval = setInterval(() => {
             setCurrentLight(light => getNextLight(light));

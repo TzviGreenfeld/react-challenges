@@ -31,11 +31,11 @@ export default function WhacAMole() {
     };
 
     const hideMole = (index) => {
-        if (moles[index]) {
-            const newMoles = [...moles];
-            newMoles[index] = false;
-            setMoles(newMoles);
-        }
+        // if (moles[index]) {
+        const newMoles = [...moles];
+        newMoles[index] = false;
+        setMoles(newMoles);
+        // }
     };
 
     const whackMole = (index) => {
@@ -62,11 +62,11 @@ export default function WhacAMole() {
             popMole(moleToPop);
             setTimeout(() => {
                 hideMole(moleToPop);
-            }, 500);
+            }, 700);
         }, 1000);
 
         return () => clearInterval(interval);
-    }, [gameActive]);
+    }, [gameActive, moles]);
 
 
     return (
@@ -79,7 +79,7 @@ export default function WhacAMole() {
             <main>
                 <Timer
                     key={timerKey}
-                    initialTimeInSeconds={60}
+                    initialTimeInSeconds={20}
                     onTimerDone={() => setGameActive(false)} />
                 <h1>Score: {score}</h1>
                 <div className={styles.board}>

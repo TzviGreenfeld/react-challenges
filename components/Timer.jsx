@@ -20,5 +20,5 @@ export default function Timer({ initialTimeInSeconds, onTimerDone }) {
 
 
 
-    return <div className={`${styles.container} ${time < 6 && styles.lastSeconds}`}>{time}</div>;
+    return <div className={`${styles.container} ${time < 4 && styles.lastSeconds}`}>00:{time}</div>;
 }
