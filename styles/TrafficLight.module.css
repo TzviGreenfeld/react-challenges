@@ -1,0 +1,37 @@
+.lightsContainer {
+    border: 1px solid var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+}
+
+.light {
+    border: 1px solid rgb(180);
+    border-radius: 50%;
+    width: 150px;
+    aspect-ratio: 1;
+    margin: 10px;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.off {
+    background-color: gray;
+}
+
+.pole {
+    width: 10px;
+    height: 500px;
+    background-color: var(--primary-color);
+}
