@@ -32,6 +32,11 @@ export default function Home() {
               className={styles.description}
               href="/whac-a-mole" >Whac-A-Mole</a>
           </li>
+          <li key='infinite-scroll'>
+            <a
+              className={styles.description}
+              href="/infinite-scroll" >Infinite-Scroll</a>
+          </li>
         </ul>
 
 
